@@ -1,0 +1,78 @@
+// Markdown overrides
+
+.markdown {
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 1rem 0;
+  }
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 1rem 0;
+    strong {
+      color: $secondaryColor;
+    }
+  }
+  a {
+    color: $linkColor;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  code {
+    white-space: nowrap;
+    background-color: #fff;
+    border: 1px solid #e1e1e8;
+    color: #009;
+    padding: 2px 6px;
+    font-size: 0.875rem;
+    font-family: Monaco, monospace;
+  }
+  pre code {
+    white-space: pre;
+    background-color: transparent;
+    color: currentColor;
+    font-size: 1em;
+    padding: 0;
+    border: 0 none;
+  }
+  blockquote {
+    border-left: 2px solid #6db33f;
+    margin: 0;
+    padding: 10px 10px 10px 30px;
+    position: relative;
+    background: white;
+    color: #333;
+    p {
+      color: #333;
+    }
+  }
+
+  blockquote:after {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    content: "\”";
+    font-size: 30px;
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    color: #6db33f;
+    font-style: normal;
+    line-height: 1.5em;
+    text-align: center;
+    text-indent: -2px;
+    margin-top: -14px;
+    background: #fff;
+    height: 30px;
+    width: 20px;
+  }
+
+  button.is-copy {
+    font-size: 9px;
+    padding: 0 5px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+  }
+}

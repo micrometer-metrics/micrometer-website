@@ -1,0 +1,23 @@
+$color: #111;
+$colorLight: #999;
+$colorInverse: #fff;
+$linkColor: #086dc3;
+$blueColor: #06c;
+$secondaryColor: #1aa79c;
+$secondaryContrastColor: darken($secondaryColor, 9%);
+$highlightColor: #117a71;
+$backgroundLight: #ebf2f2;
+$background: #fff;
+$borderColor: #d9e9e9;
+$borderColorLight: #ebf2f2;
+$inputBorder: #000;
+$fontFamily: "Open Sans", sans-serif;
+$fontFamilySpecial: "Metropolis", sans-serif;
+$fontFamilySpecial2: "Work Sans", sans-serif;
+
+body {
+  --bg: #fff;
+  --color: $color;
+  --border: $borderColorLight;
+  --borderHighlight: #6d7579;
+}
