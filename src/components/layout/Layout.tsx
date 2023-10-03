@@ -49,7 +49,6 @@ const Layout = ({ children, className, seo, hideNewsletter }: Props) => {
         Skip to main content
       </a>
       <Seo metadata={metadata} />
-      {/* <SpringOne /> */}
       <Header />
       <div className={`main ${className}`} id="main" role="main">
         {children}

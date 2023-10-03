@@ -2,7 +2,7 @@ import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `Micrometer`,
+    title: `Micrometer Application Observability`,
     siteUrl: `https://micrometer.io/`,
     description:
       "Application observability facade for the most popular observability tools. Think SLF4J, but for observability.",
