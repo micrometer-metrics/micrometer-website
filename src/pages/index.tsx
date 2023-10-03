@@ -99,4 +99,4 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <title>Micrometer</title>;
+export const Head: HeadFC = () => <title>Micrometer Application Observability</title>;
