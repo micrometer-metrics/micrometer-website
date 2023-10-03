@@ -38,21 +38,6 @@ const Footer = ({ hideNewsletter }: Props) => {
                   >
                     Privacy
                   </a>
-                  •{" "}
-                  <Link className="footer-link" to={"/trademarks"}>
-                    Trademark Guidelines
-                  </Link>{" "}
-                  •{" "}
-                  <a
-                    className="footer-link"
-                    href="https://www.vmware.com/help/privacy/california-privacy-rights.html"
-                  >
-                    Your California Privacy Rights
-                  </a>{" "}
-                  •{" "}
-                  <a className="ot-sdk-show-settings footer-link">
-                    Cookie Settings
-                  </a>
                 </p>
               </div>
               <div className="social-links column is-2">
