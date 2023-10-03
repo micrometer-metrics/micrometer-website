@@ -5,22 +5,27 @@ import Layout from "../components/layout/Layout";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
-    <Layout>
-      <section className="container">
-        <div className="content markdown py-6">
-          <div className="py-6 my-6 has-text-centered">
-            <h1 className="m-0 py-0 is-size-2">
-              Vendor-neutral application observability facade
-            </h1>
-            <p className="m-0 pt-2">
-              Micrometer provides a simple facade over the instrumentation
-              clients for the most popular observability systems, allowing you
-              to instrument your JVM-based application code without vendor
-              lock-in. Think SLF4J, but for observability.
-            </p>
+    <Layout className="home">
+      <div className="banner">
+        <section className="container">
+          <div className="content markdown py-6">
+            <div className="py-5 my-5 has-text-centered">
+              <img className="logo mb-4" src="/img/logo-no-title.svg" alt="" />
+              <div className="banner-content">
+                <h1 className="m-0 py-0 is-size-2">
+                  Vendor-neutral application observability facade
+                </h1>
+                <p className="m-0 pt-2 is-size-5">
+                  Micrometer provides a simple facade over the instrumentation
+                  clients for the most popular observability systems, allowing
+                  you to instrument your JVM-based application code without
+                  vendor lock-in. Think SLF4J, but for observability.
+                </p>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
       <div className="has-background-light py-6">
         <div className="container content markdown py-4">
           <div className="columns">
@@ -99,4 +104,6 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <title>Micrometer Application Observability</title>;
+export const Head: HeadFC = () => (
+  <title>Micrometer Application Observability</title>
+);
