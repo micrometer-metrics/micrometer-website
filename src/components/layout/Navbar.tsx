@@ -69,7 +69,7 @@ const Nav = ({ isDesktop, subitems, onClickItem }: any) => {
 };
 
 const Navbar = () => {
-  const navItemsCount = 6;
+  const navItemsCount = 1;
   const [navbarActive, setNavbarActive] = React.useState(false);
   const [stateSubItems, setStateSubItems] = React.useState(
     new Array().fill(false, 0, navItemsCount)
