@@ -1,37 +1,4 @@
 .home {
-  .extra-container {
-    position: absolute;
-    height: 400px;
-    width: 100%;
-  }
-  .tag.is-primary {
-    background: $blueColor !important;
-    border-radius: 12px;
-    padding: 0 14px;
-    font-weight: bold;
-  }
-  .box.is-special {
-    border: 2px solid $borderColorLight;
-    height: 100%;
-    padding-top: 20px !important;
-    border-radius: 5px;
-    font-family: $fontFamilySpecial2;
-    color: var(--color);
-    .icon {
-      width: 120px;
-      height: 120px;
-    }
-    p {
-      font-size: 1.05rem;
-    }
-    &:hover {
-      text-decoration: none;
-      border-color: $borderColor;
-      h1 {
-        color: $secondaryColor;
-      }
-    }
-  }
   .banner {
     background: url(/img/banner.svg) no-repeat center;
     background-size: contain;
