@@ -64,7 +64,7 @@ const IndexPage: React.FC<PageProps> = () => {
         </div>
       </div>
       <div className="container content markdown py-6">
-        <div className="px-6">
+        <div className="px-6 sm-no-padding">
           <h2 className="is-size-2">
             Support for popular observability systems
           </h2>

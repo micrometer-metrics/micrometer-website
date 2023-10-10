@@ -27,18 +27,6 @@ body.dark {
     border-bottom: 1px solid var(--border);
   }
 
-  .home .box.is-special .icon,
-  .project .samples article a img {
-    filter: invert(1);
-  }
-  .home .box.is-special {
-    border-color: #2b2f33;
-    &:hover {
-      box-shadow: none;
-      background: #1f2327;
-      border-color: #6d7579;
-    }
-  }
   .has-border-bottom {
     border-color: #2b2f33;
   }
@@ -57,18 +45,6 @@ body.dark {
     box-shadow: none;
     background: #17191c;
   }
-  .home .code .terminal {
-    background: #262a2d;
-    box-shadow: none;
-  }
-  .home .code .terminal code[class*="language-"],
-  .home .code .terminal pre[class*="language-"] {
-    background: #262a2d;
-  }
-  .home .testimony .testimony-author {
-    color: #fff;
-  }
-
   .has-background-light {
     background: #262a2d !important;
   }
@@ -206,11 +182,7 @@ body.dark {
   .navbar-mobile .navbar-burger {
     color: #fff;
   }
-  .default-banner .extra .extra-2 {
-    opacity: 0.3;
-  }
-  .menu-list li ul,
-  .security .item {
+  .menu-list li ul  {
     border-color: #2b2f33;
   }
   .hljs {
