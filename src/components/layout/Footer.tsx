@@ -24,7 +24,7 @@ const Footer = ({ hideNewsletter }: Props) => {
               <div className="column">
                 <p><Logo /></p>
                 <p className="has-text-grey6">
-                  © {new Date().getFullYear()} VMware, Inc. or its affiliates.{" "}
+                  Copyright © 2005 - {new Date().getFullYear()} Broadcom. All Rights Reserved. The term “Broadcom” refers to Broadcom Inc. and/or its subsidiaries.{" "}
                   <a
                     href="https://www.vmware.com/help/legal.html"
                     className="footer-link"
