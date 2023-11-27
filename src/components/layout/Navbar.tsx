@@ -43,27 +43,42 @@ const Nav = ({ isDesktop, subitems, onClickItem }: any) => {
         </span>
         <ul className={`${item2} is-boxed`}>
           <li>
-            <Link className={`${item2Item}`} to="https://docs.micrometer.io/context-propagation/reference/">
+            <Link
+              className={`${item2Item}`}
+              to="https://docs.micrometer.io/context-propagation/reference/"
+            >
               Context Propagation
             </Link>
           </li>
           <li>
-            <Link className={`${item2Item}`} to="https://docs.micrometer.io/micrometer/reference/">
+            <Link
+              className={`${item2Item}`}
+              to="https://docs.micrometer.io/micrometer/reference/"
+            >
               Micrometer
             </Link>
           </li>
           <li>
-            <Link className={`${item2Item}`} to="https://docs.micrometer.io/tracing/reference/">
+            <Link
+              className={`${item2Item}`}
+              to="https://docs.micrometer.io/tracing/reference/"
+            >
               Micrometer Tracing
             </Link>
           </li>
           <li>
-            <Link className={`${item2Item}`} to="https://docs.micrometer.io/micrometer-docs-generator/reference/">
+            <Link
+              className={`${item2Item}`}
+              to="https://docs.micrometer.io/micrometer-docs-generator/reference/"
+            >
               Micrometer Docs Generator
             </Link>
           </li>
         </ul>
       </div>
+      <Link className="navbar-item" to="/support/">
+        Support
+      </Link>
     </div>
   );
 };
