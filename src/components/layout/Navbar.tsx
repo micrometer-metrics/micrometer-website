@@ -39,7 +39,7 @@ const Nav = ({ isDesktop, subitems, onClickItem }: any) => {
             onClickHandler(0);
           }}
         >
-          Projects
+          Documentation
         </span>
         <ul className={`${item2} is-boxed`}>
           <li>
