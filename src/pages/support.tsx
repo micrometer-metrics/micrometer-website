@@ -56,16 +56,12 @@ const SupportPage: React.FC<PageProps> = () => {
           </thead>
           <tbody>
             <tr>
+              <td>1.12.x</td>
+              <td>November 2024</td>
+            </tr>
+            <tr>
               <td>1.11.x</td>
               <td>May 2024</td>
-            </tr>
-            <tr>
-              <td>1.10.x</td>
-              <td>November 2023</td>
-            </tr>
-            <tr>
-              <td>1.9.x</td>
-              <td>November 2023</td>
             </tr>
           </tbody>
         </table>
@@ -80,6 +76,18 @@ const SupportPage: React.FC<PageProps> = () => {
             </tr>
           </thead>
           <tbody>
+            <tr>
+              <td>1.10.x</td>
+              <td>
+                <code>1.10.13</code>
+              </td>
+            </tr>
+            <tr>
+              <td>1.9.x</td>
+              <td>
+                <code>1.9.17</code>
+              </td>
+            </tr>
             <tr>
               <td>1.8.x</td>
               <td>
