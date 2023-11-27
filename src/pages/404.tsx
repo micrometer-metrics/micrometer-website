@@ -56,6 +56,7 @@ const NotFoundPage: React.FC<PageProps> = () => {
             var l = window.location;
             if (l.pathname.split('/')[1] === 'docs') {
               console.log('Redirecting from pathname: ' + l.pathname);
+              alert('Redirecting from pathname: ' + l.pathname);
               l.replace(
                 l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
                 l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
