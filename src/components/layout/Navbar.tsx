@@ -76,7 +76,7 @@ const Nav = ({ isDesktop, subitems, onClickItem }: any) => {
           </li>
         </ul>
       </div>
-      <Link className="navbar-item" to="/support/">
+      <Link className={`${item2Item}`} to="/support/">
         Support
       </Link>
     </div>
