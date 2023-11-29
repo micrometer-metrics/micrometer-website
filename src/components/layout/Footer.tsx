@@ -1,12 +1,4 @@
-import { Link } from "gatsby";
 import * as React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faGithub,
-  faSlack,
-  faTwitter,
-  faYoutube,
-} from "@fortawesome/free-brands-svg-icons";
 import Logo from "./Logo"
 import Social from "./Social";
 

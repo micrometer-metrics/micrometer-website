@@ -1,4 +1,3 @@
-import { Link } from "gatsby";
 import React from "react";
 import { ThemeToggler } from "gatsby-plugin-dark-mode";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
