@@ -136,6 +136,9 @@ body.dark {
       text-shadow: none;
     }
   }
+  .content code {
+    background: rgba(255, 255, 255, 0.05);
+  }
   strong {
     color: #fff;
   }
@@ -182,7 +185,7 @@ body.dark {
   .navbar-mobile .navbar-burger {
     color: #fff;
   }
-  .menu-list li ul  {
+  .menu-list li ul {
     border-color: #2b2f33;
   }
   .hljs {
