@@ -48,6 +48,7 @@ const SupportPage: React.FC<PageProps> = () => {
         <h2>Released versions</h2>
         <p>The following releases are actively maintained:</p>
         <table className="table is-bordered">
+          <caption>Supported minor releases</caption>
           <thead>
             <tr>
               <th>Minor release</th>
@@ -65,10 +66,10 @@ const SupportPage: React.FC<PageProps> = () => {
             </tr>
           </tbody>
         </table>
-        <p>Supported minor releases</p>
 
         <p>The following releases are out of OSS support:</p>
         <table className="table is-bordered">
+          <caption>Out of OSS support minor releases</caption>
           <thead>
             <tr>
               <th>Minor release</th>
@@ -144,7 +145,6 @@ const SupportPage: React.FC<PageProps> = () => {
             </tr>
           </tbody>
         </table>
-        <p>Out of OSS support minor releases</p>
 
         <h2>Examples</h2>
         <p>

@@ -25,6 +25,15 @@ code,
   color: var(--color);
 }
 
+table {
+  caption-side: bottom;
+  caption {
+    text-align: left;
+    text-rendering: optimizeLegibility;
+    font-style: italic;
+  }
+}
+
 .main {
   line-height: 1.7rem;
   a {
