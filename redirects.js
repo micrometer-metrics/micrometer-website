@@ -1,6 +1,6 @@
 module.exports = [
-  {
-    from: "/security-policy",
-    to: "https://tanzu.vmware.com/security",
-  },
+  // {
+  //   from: "/security-policy",
+  //   to: "https://tanzu.vmware.com/security",
+  // },
 ];
