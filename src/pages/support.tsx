@@ -4,29 +4,12 @@ import "../styles/main.scss";
 import Layout from "../components/layout/Layout";
 import { Releases } from "../components/support/Release";
 import { getVersions } from "../components/support/Project";
+import releases from "../../static/releases.json";
+
 
 const SupportPage: React.FC<PageProps> = () => {
-  const support = getVersions([
-    {
-      branch: "2.0.0",
-      initialDate: "2023-11-23",
-      ossEnforcedEnd: "2024-11-23",
-      commercialEnforcedEnd: "2026-02-23",
-    },
-    {
-      branch: "1.0.1",
-      initialDate: "2023-05-18",
-      ossEnforcedEnd: "2024-05-18",
-      commercialPolicyEnd: "2025-08-18",
-    },
-    {
-      branch: "1.0.0",
-      initialDate: "2021-11-17",
-      ossPolicyEnd: "2022-11-24",
-      commercialPolicyEnd: "2024-02-24",
-    },
-  ]);
-  
+  const support = getVersions(releases);
+
   return (
     <Layout className="support">
       <div className="container content py-6">
