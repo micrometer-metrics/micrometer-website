@@ -397,3 +397,28 @@ $future: #c1edff;
     color: white;
   }
 }
+
+.project-support {
+  .past {
+    color: $colorLight;
+  }
+  .status {
+    display: inline-block;
+    background: #ecf2f2;
+    height: 16px;
+    width: 16px;
+    border-radius: 8px;
+    &.migrate {
+      background-color: #ffe88e;
+    }
+    &.coming {
+      background-color: #c1edff;
+    }
+    &.active {
+      background-color: #99e67d;
+    }
+  }
+  td {
+    font-size: 14px;
+  }
+}

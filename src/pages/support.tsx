@@ -5,7 +5,29 @@ import Layout from "../components/layout/Layout";
 import { Releases } from "../components/support/Release";
 import { getVersions } from "../components/support/Project";
 import releases from "../../static/releases.json";
+import { DateTime } from "luxon"
 
+const isPast = (date: DateTime): boolean => date < DateTime.now()
+
+const Item = ({ version }: any) => {
+  return (
+    <tr>
+      <td>
+        <span className={`status mr-3 ${version.status}`}></span>
+        {version.branch}
+      </td>
+      <td className={`${isPast(version.initialRelease) ? "past" : ""}`}>
+        {version.initialReleaseDate}
+      </td>
+      <td className={`${isPast(version.endOfSupport) ? "past" : ""}`}>
+        {version.endOfSupportDate}
+      </td>
+      <td className={`${isPast(version.endCommercialSupport) ? "past" : ""}`}>
+        {version.endCommercialSupportDate}
+      </td>
+    </tr>
+  );
+};
 
 const SupportPage: React.FC<PageProps> = () => {
   const support = getVersions(releases);
@@ -53,6 +75,7 @@ const SupportPage: React.FC<PageProps> = () => {
 
         <h2>Released versions</h2>
         <p>The following releases are actively maintained:</p>
+        {/* 
         <table className="table is-bordered">
           <caption>Supported minor releases</caption>
           <thead>
@@ -71,11 +94,63 @@ const SupportPage: React.FC<PageProps> = () => {
               <td>May 2024</td>
             </tr>
           </tbody>
+        </table> */}
+
+        <table
+          className="table project-support is-fullwidth mt-4 mb-0"
+          aria-label="Project support"
+        >
+          <thead>
+            <tr>
+              <th>Branch</th>
+              <th>Initial Release</th>
+              <th>End of Support</th>
+              <th>End Commercial Support *</th>
+            </tr>
+          </thead>
+          <tbody>
+            {support.map((version: any, index: number) => (
+              <Item version={version} key={`item-${index}`} />
+            ))}
+          </tbody>
         </table>
 
-        <div className="calendar-releases">
+        <div className="calendar-releases mt-6">
           <div className="timeline">
             <Releases releases={support} />
+          </div>
+        </div>
+
+        <div className="release-legend has-bigest-border-light px-6 py-4 mb-6">
+          <div className="legend-block oss my-3">
+            <h3 className="is-size-6 has-text-weight-bold">OSS support</h3>
+            <p>
+              Free security updates and bugfixes with support from the Spring
+              community. See{" "}
+              <a href="https://tanzu.vmware.com/support/oss">
+                VMware Tanzu OSS support policy
+              </a>
+              .
+            </p>
+          </div>
+
+          <div className="legend-block commercial my-3">
+            <h3 className="is-size-6 has-text-weight-bold">
+              Commercial support
+            </h3>
+            <p>
+              Business support from Spring experts during the OSS timeline, plus
+              extended support after OSS End-Of-Life.
+              <br />
+              See <a href="https://spring.io/support">
+                Tanzu Spring Runtime
+              </a>{" "}
+              for more details.
+            </p>
+          </div>
+          <div className="legend-block future my-3">
+            <h3 className="is-size-6 has-text-weight-bold">Future release</h3>
+            <p>Generation not yet released, timeline is subject to changes.</p>
           </div>
         </div>
 
