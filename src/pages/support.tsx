@@ -2,8 +2,31 @@ import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
 import "../styles/main.scss";
 import Layout from "../components/layout/Layout";
+import { Releases } from "../components/support/Release";
+import { getVersions } from "../components/support/Project";
 
 const SupportPage: React.FC<PageProps> = () => {
+  const support = getVersions([
+    {
+      branch: "2.0.0",
+      initialDate: "2023-11-23",
+      ossEnforcedEnd: "2024-11-23",
+      commercialEnforcedEnd: "2026-02-23",
+    },
+    {
+      branch: "1.0.1",
+      initialDate: "2023-05-18",
+      ossEnforcedEnd: "2024-05-18",
+      commercialPolicyEnd: "2025-08-18",
+    },
+    {
+      branch: "1.0.0",
+      initialDate: "2021-11-17",
+      ossPolicyEnd: "2022-11-24",
+      commercialPolicyEnd: "2024-02-24",
+    },
+  ]);
+  
   return (
     <Layout className="support">
       <div className="container content py-6">
@@ -66,6 +89,12 @@ const SupportPage: React.FC<PageProps> = () => {
             </tr>
           </tbody>
         </table>
+
+        <div className="calendar-releases">
+          <div className="timeline">
+            <Releases releases={support} />
+          </div>
+        </div>
 
         <p>The following releases are out of OSS support:</p>
         <table className="table is-bordered">

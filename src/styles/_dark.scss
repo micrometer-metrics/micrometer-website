@@ -210,4 +210,18 @@ body.dark {
   .icon-img {
     filter: invert(1);
   }
+
+  .calendar-releases .timeline .releases .inactive {
+    background: #2b2f33;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  .calendar-releases .timeline .axis .year .label {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  .calendar-releases .timeline .releases .plop-migrate.cropped::after {
+    background: linear-gradient(90deg, #2b2f33 0%, #ffe88e 100%);
+  }
+  .calendar-releases .timeline .releases .plop-active.cropped::after {
+    background: linear-gradient(90deg, #2b2f33 0%, #99e67d 100%);
+  }
 }
