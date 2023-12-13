@@ -2,13 +2,13 @@
   {
     "branch": "2.0.0",
     "initialDate": "2023-11-23",
-    "ossEnforcedEnd": "2024-11-23",
-    "commercialEnforcedEnd": "2026-02-23"
+    "ossPolicyEnd": "2024-11-23",
+    "commercialPolicyEnd": "2026-02-23"
   },
   {
     "branch": "1.0.1",
     "initialDate": "2023-05-18",
-    "ossEnforcedEnd": "2024-05-18",
+    "ossPolicyEnd": "2024-05-18",
     "commercialPolicyEnd": "2025-08-18"
   },
   {
