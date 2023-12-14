@@ -1,20 +1,38 @@
 [
   {
-    "branch": "2.0.0",
-    "initialDate": "2023-11-23",
+    "branch": "1.12.x",
+    "initialDate": "2023-11-13",
     "ossPolicyEnd": "2024-11-23",
     "commercialPolicyEnd": "2026-02-23"
   },
   {
-    "branch": "1.0.1",
-    "initialDate": "2023-05-18",
+    "branch": "1.11.x",
+    "initialDate": "2023-05-09",
     "ossPolicyEnd": "2024-05-18",
     "commercialPolicyEnd": "2025-08-18"
   },
   {
-    "branch": "1.0.0",
-    "initialDate": "2021-11-17",
+    "branch": "1.10.x",
+    "initialDate": "2022-11-07",
+    "ossPolicyEnd": "2023-11-24",
+    "commercialPolicyEnd": "2025-02-24"
+  },
+  {
+    "branch": "1.9.x",
+    "initialDate": "2022-05-12",
+    "ossPolicyEnd": "2023-11-24",
+    "commercialPolicyEnd": "2025-08-24"
+  },
+  {
+    "branch": "1.8.x",
+    "initialDate": "2021-11-11",
     "ossPolicyEnd": "2022-11-24",
     "commercialPolicyEnd": "2024-02-24"
+  },
+  {
+    "branch": "1.7.x",
+    "initialDate": "2021-05-12",
+    "ossPolicyEnd": "2022-05-19",
+    "commercialPolicyEnd": "2023-08-24"
   }
 ]
