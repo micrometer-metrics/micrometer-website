@@ -1,38 +1,19 @@
 import * as React from "react";
 import { Link, HeadFC, PageProps, Script } from "gatsby";
-
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-};
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-};
-
-const paragraphStyles = {
-  marginBottom: 48,
-};
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-};
+import Layout from "../components/layout/Layout";
 
 const browser = typeof window !== "undefined" && window;
-const isRedirectingDocs : boolean = browser && window.location.pathname.split('/')[1] === 'docs';
+const isRedirectingDocs: boolean =
+  browser && window.location.pathname.split("/")[1] === "docs";
 
 const NotFoundPage: React.FC<PageProps> = () => {
   return (
     browser && (
-      <main style={pageStyles}>
-        <h1 style={headingStyles}>{ isRedirectingDocs ? 'Redirecting' : 'Page not found' }</h1>
-        <Script id="redirect-docs-script">
-          {`
+      <Layout className="home">
+        <div className="container content markdown py-6">
+          <h1 className="is-size-2">{isRedirectingDocs ? "Redirecting" : "Page not found"}</h1>
+          <Script id="redirect-docs-script">
+            {`
             // Single Page Apps for GitHub Pages
             // MIT License
             // https://github.com/rafgraph/spa-github-pages
@@ -64,23 +45,16 @@ const NotFoundPage: React.FC<PageProps> = () => {
               );
             }
           `}
-        </Script>
-        { !isRedirectingDocs ? (
-        <p style={paragraphStyles}>
-          Sorry 😔, we couldn’t find what you were looking for.
-          <br />
-          {process.env.NODE_ENV === "development" ? (
-            <>
+          </Script>
+          {!isRedirectingDocs ? (
+            <p className="pb-4">
+              Sorry, we couldn’t find what you were looking for.
               <br />
-              Try creating a page in <code style={codeStyles}>src/pages/</code>.
-              <br />
-            </>
+              <Link to="/">Go to the homepage</Link>.
+            </p>
           ) : null}
-          <br />
-          <Link to="/">Go home</Link>.
-        </p>
-          ) : null }
-      </main>
+        </div>
+      </Layout>
     )
   );
 };
