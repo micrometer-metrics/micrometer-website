@@ -30,7 +30,7 @@ const IndexPage: React.FC<PageProps> = () => {
         <div className="container content markdown py-4">
           <div className="columns">
             <article className="column has-text-centered">
-              <img className="icon-img" src={`/img/icon-1.svg`} alt="" />
+              <img className="icon-img" src={`/img/icon-1.png`} alt="" />
               <h1 className="h2-special">Integrated into Frameworks</h1>
               <p>
                 Popular frameworks that integrate with Micrometer include <a
@@ -43,7 +43,7 @@ const IndexPage: React.FC<PageProps> = () => {
               </p>
             </article>
             <article className="column has-text-centered">
-              <img className="icon-img" src={`/img/icon-2.svg`} alt=""/>
+              <img className="icon-img" src={`/img/icon-2.png`} alt=""/>
               <h1 className="h2-special">Instrumentation Provided</h1>
               <p>
                 Out-of-the-box instrumentation is available in micrometer-core and in libraries. You do not need to
@@ -51,7 +51,7 @@ const IndexPage: React.FC<PageProps> = () => {
               </p>
             </article>
             <article className="column has-text-centered">
-              <img className="icon-img" src={`/img/icon-3.svg`} alt=""/>
+              <img className="icon-img" src={`/img/icon-3.png`} alt=""/>
               <h1 className="h2-special">Works in your Environment</h1>
               <p>
                 Micrometer can directly publish to most backends for storing your observability data. You can use what
@@ -61,7 +61,7 @@ const IndexPage: React.FC<PageProps> = () => {
           </div>
           <div className="columns">
             <article className="column has-text-centered">
-              <img className="icon-img" src={`/img/icon-3.svg`} alt=""/>
+              <img className="icon-img" src={`/img/icon-4.png`} alt=""/>
               <h1 className="h2-special">Dimensional Metrics</h1>
               <p>
                 Vendor-neutral abstractions for timers, gauges, counters, distribution summaries, and long task timers
@@ -70,7 +70,7 @@ const IndexPage: React.FC<PageProps> = () => {
               </p>
             </article>
             <article className="column has-text-centered">
-              <img className="icon-img" src={`/img/icon-3.svg`} alt=""/>
+              <img className="icon-img" src={`/img/icon-5.png`} alt=""/>
               <h1 className="h2-special">Distributed Tracing</h1>
               <p>
                 Micrometer Tracing is a facade over the Brave and OpenTelemetry tracers that gives insight into complex
@@ -79,7 +79,7 @@ const IndexPage: React.FC<PageProps> = () => {
               </p>
             </article>
             <article className="column has-text-centered">
-              <img className="icon-img" src={`/img/icon-3.svg`} alt=""/>
+              <img className="icon-img" src={`/img/icon-6.png`} alt=""/>
               <h1 className="h2-special">Unified Observability</h1>
               <p>
                 You can instrument with the Micrometer Observation API, a single abstraction that can produce metrics,
