@@ -16,10 +16,10 @@ const IndexPage: React.FC<PageProps> = () => {
                   Vendor-neutral application observability facade
                 </h1>
                 <p className="m-0 pt-2 is-size-5">
-                  Micrometer provides a simple facade over the instrumentation
-                  clients for the most popular observability systems, allowing
-                  you to instrument your JVM-based application code without
-                  vendor lock-in. Think SLF4J, but for observability.
+                  Micrometer provides a facade for the most popular
+                  observability systems, allowing you to instrument your
+                  JVM-based application code without vendor lock-in. Think
+                  SLF4J, but for observability.
                 </p>
               </div>
             </div>
@@ -30,34 +30,61 @@ const IndexPage: React.FC<PageProps> = () => {
         <div className="container content markdown py-4">
           <div className="columns">
             <article className="column has-text-centered">
-              <img className="icon-img" src={`/img/icon-3.svg`} alt="" />
+              <img className="icon-img" src={`/img/icon-1.svg`} alt="" />
+              <h1 className="h2-special">Integrated into Frameworks</h1>
+              <p>
+                Popular frameworks that integrate with Micrometer include <a
+                href="https://helidon.io/docs/v2/#/se/metrics/02_micrometer">Helidon</a>, <a
+                href="https://micronaut-projects.github.io/micronaut-micrometer/latest/guide/">Micronaut</a>, <a
+                href="https://quarkus.io/guides/telemetry-micrometer">Quarkus</a>, and <a
+                href="https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#actuator.observability">Spring</a>.
+                You can use the idioms and configuration model native to your application framework to get started with
+                Micrometer.
+              </p>
+            </article>
+            <article className="column has-text-centered">
+              <img className="icon-img" src={`/img/icon-2.svg`} alt=""/>
+              <h1 className="h2-special">Instrumentation Provided</h1>
+              <p>
+                Out-of-the-box instrumentation is available in micrometer-core and in libraries. You do not need to
+                write your own instrumentation for many common components.
+              </p>
+            </article>
+            <article className="column has-text-centered">
+              <img className="icon-img" src={`/img/icon-3.svg`} alt=""/>
+              <h1 className="h2-special">Works in your Environment</h1>
+              <p>
+                Micrometer can directly publish to most backends for storing your observability data. You can use what
+                you have or switch. Micrometer makes it easy. See below and the documentation for supported backends.
+              </p>
+            </article>
+          </div>
+          <div className="columns">
+            <article className="column has-text-centered">
+              <img className="icon-img" src={`/img/icon-3.svg`} alt=""/>
               <h1 className="h2-special">Dimensional Metrics</h1>
               <p>
-                Micrometer provides vendor-neutral interfaces for{" "}
-                <strong>timers</strong>, <strong>gauges</strong>,{" "}
-                <strong>counters</strong>,{" "}
-                <strong>distribution summaries</strong>, and{" "}
-                <strong>long task timers</strong> with a dimensional data model
-                that, when paired with a dimensional monitoring system, allows
-                for efficient access to a particular named metric with the
-                ability to drill down across its dimensions.
+                Vendor-neutral abstractions for timers, gauges, counters, distribution summaries, and long task timers
+                are provided with a dimensional data model. You can publish to a backend that supports dimensional
+                metrics for efficient access to named metrics where you can drill down across its dimensions.
               </p>
             </article>
             <article className="column has-text-centered">
-              <img className="icon-img" src={`/img/icon-2.svg`} alt="" />
-              <h1 className="h2-special">Pre-configured Bindings</h1>
+              <img className="icon-img" src={`/img/icon-3.svg`} alt=""/>
+              <h1 className="h2-special">Distributed Tracing</h1>
               <p>
-                Out-of-the-box instrumentation of caches, the class loader,
-                garbage collection, processor utilization, thread pools, and
-                more tailored to actionable insight.
+                Micrometer Tracing is a facade over the Brave and OpenTelemetry tracers that gives insight into complex
+                distributed systems at the level of an individual user request. Identify the root cause of issues faster
+                with distributed tracing. Micrometer Tracing is the successor to the Spring Cloud Sleuth project.
               </p>
             </article>
             <article className="column has-text-centered">
-              <img className="icon-img" src={`/img/icon-1.svg`} alt="" />
-              <h1 className="h2-special">Integrated into Spring</h1>
+              <img className="icon-img" src={`/img/icon-3.svg`} alt=""/>
+              <h1 className="h2-special">Unified Observability</h1>
               <p>
-                Micrometer is the instrumentation library powering the delivery
-                of application observability from Spring Boot applications.
+                You can instrument with the Micrometer Observation API, a single abstraction that can produce metrics,
+                tracing, logs and more. You can instrument once, get multiple benefits, and keep metadata consistent
+                across your observability data.
               </p>
             </article>
           </div>
@@ -69,15 +96,12 @@ const IndexPage: React.FC<PageProps> = () => {
             Support for popular observability systems
           </h2>
           <p>
-            As an instrumentation facade, Micrometer allows you to instrument
-            your code with dimensional metrics, spans with a vendor-neutral
-            interface and decide on the observability system as a last step.
-            Instrumenting your core library code with Micrometer allows the
-            libraries to be included in applications that ship data to different
-            backends.
+            As an instrumentation facade, Micrometer lets you instrument your code with a vendor-neutral interface and
+            decide on the observability system as a last step. Instrumenting a library with Micrometer lets it be used
+            in applications that ship data to different backends or even multiple backends at the same time.
           </p>
           <p>
-            Contains built-in support for <strong>AppOptics</strong>,{" "}
+            Micrometer supports publishing metrics to <strong>AppOptics</strong>,{" "}
             <strong>Azure Monitor</strong>, Netflix <strong>Atlas</strong>,{" "}
             <strong>CloudWatch</strong>, <strong>Datadog</strong>,{" "}
             <strong>Dynatrace</strong>, <strong>Elastic</strong>,{" "}
