@@ -223,4 +223,7 @@ body.dark {
   .calendar-releases .timeline .releases .plop-active.cropped::after {
     background: linear-gradient(90deg, #2b2f33 0%, #99e67d 100%);
   }
+  .project-support .past {
+    color: rgba(255, 255, 255, 0.5);
+  }
 }
