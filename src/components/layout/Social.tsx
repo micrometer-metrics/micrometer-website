@@ -2,7 +2,7 @@ import * as React from "react";
 import {
   faSlack,
   faGithub,
-  faTwitter,
+  faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -28,7 +28,7 @@ const Social = () => {
         href="https://twitter.com/micrometerio"
         className="button is-black is-rounded"
       >
-        <FontAwesomeIcon icon={faTwitter} />
+        <FontAwesomeIcon icon={faXTwitter} />
       </a>
     </>
   );
