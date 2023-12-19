@@ -11,4 +11,14 @@
       line-height: 2rem;
     }
   }
+  .features {
+    .feature {
+      opacity: 0;
+    }
+    &.visible {
+      .feature {
+        animation: riseUp 0.5s forwards ease, fadeIn 0.7s forwards ease;
+      }
+    }
+  }
 }
