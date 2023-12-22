@@ -35,15 +35,24 @@ const IndexPage: React.FC<PageProps> = () => {
               <h1 className="h2-special">Integrated into Frameworks</h1>
               <p>
                 Popular frameworks that integrate with Micrometer include{" "}
-                <a href="https://helidon.io/docs/v2/#/se/metrics/02_micrometer">
+                <a
+                  href="https://helidon.io/docs/v2/#/se/metrics/02_micrometer"
+                  rel="nofollow"
+                >
                   Helidon
                 </a>
                 ,{" "}
-                <a href="https://micronaut-projects.github.io/micronaut-micrometer/latest/guide/">
+                <a
+                  href="https://micronaut-projects.github.io/micronaut-micrometer/latest/guide/"
+                  rel="nofollow"
+                >
                   Micronaut
                 </a>
                 ,{" "}
-                <a href="https://quarkus.io/guides/telemetry-micrometer">
+                <a
+                  href="https://quarkus.io/guides/telemetry-micrometer"
+                  rel="nofollow"
+                >
                   Quarkus
                 </a>
                 , and{" "}
