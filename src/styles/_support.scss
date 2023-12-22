@@ -1,5 +1,5 @@
-$active: #99e67d;
-$migrate: #ffe88e;
+$active: #1aa79c;
+$migrate: #ccdede;
 $future: #c1edff;
 
 .calendar-releases {
@@ -409,13 +409,13 @@ $future: #c1edff;
     width: 16px;
     border-radius: 8px;
     &.migrate {
-      background-color: #ffe88e;
+      background-color: $migrate;
     }
     &.coming {
-      background-color: #c1edff;
+      background-color: $future;
     }
     &.active {
-      background-color: #99e67d;
+      background-color: $active;
     }
   }
   td {
