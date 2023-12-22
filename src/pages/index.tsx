@@ -131,15 +131,15 @@ const IndexPage: React.FC<PageProps> = () => {
           </p>
           <p>
             Micrometer supports publishing metrics to <strong>AppOptics</strong>
-            , <strong>Azure Monitor</strong>, Netflix <strong>Atlas</strong>,{" "}
+            , <strong>Azure Monitor</strong>, <strong>Netflix Atlas</strong>,{" "}
             <strong>CloudWatch</strong>, <strong>Datadog</strong>,{" "}
             <strong>Dynatrace</strong>, <strong>Elastic</strong>,{" "}
             <strong>Ganglia</strong>, <strong>Graphite</strong>,{" "}
             <strong>Humio</strong>, <strong>Influx/Telegraf</strong>,{" "}
             <strong>JMX</strong>, <strong>KairosDB</strong>,{" "}
             <strong>New Relic</strong>, <strong>OpenTelemetry</strong> Protocol
-            (OTLP), <strong>Prometheus</strong>, <strong>SignalFx</strong>,
-            Google <strong>Stackdriver</strong>, <strong>StatsD</strong>, and{" "}
+            (OTLP), <strong>Prometheus</strong>, <strong>SignalFx</strong>,{" "}
+            <strong>Google Stackdriver</strong>, <strong>StatsD</strong>, and{" "}
             <strong>Wavefront</strong>.
           </p>
           <p>
