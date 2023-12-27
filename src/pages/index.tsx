@@ -130,7 +130,11 @@ const IndexPage: React.FC<PageProps> = () => {
             even multiple backends at the same time.
           </p>
           <p>
-            Micrometer supports publishing metrics to <strong>AppOptics</strong>
+            Micrometer <a
+                  href="https://docs.micrometer.io/micrometer/reference/implementations.html"
+                >
+                  supports publishing metrics
+                </a> to <strong>AppOptics</strong>
             , <strong>Azure Monitor</strong>, <strong>Netflix Atlas</strong>,{" "}
             <strong>CloudWatch</strong>, <strong>Datadog</strong>,{" "}
             <strong>Dynatrace</strong>, <strong>Elastic</strong>,{" "}
@@ -143,11 +147,35 @@ const IndexPage: React.FC<PageProps> = () => {
             <strong>Wavefront</strong>.
           </p>
           <p>
-            Through <strong>Micrometer Observation</strong> and{" "}
-            <strong>Micrometer Tracing</strong> you can ship your spans via{" "}
-            <strong>OpenZipkin Brave</strong> or <strong>OpenTelemetry</strong>{" "}
-            tracers to different backends (e.g. <strong>OpenZipkin</strong> or{" "}
-            <strong>Wavefront</strong>).
+            Through <strong><a
+                  href="https://docs.micrometer.io/micrometer/reference/observation.html"
+                >
+                  Micrometer Observation
+                </a></strong> and{" "}
+            <strong><a
+                  href="https://docs.micrometer.io/tracing/reference/"
+                >
+                  Micrometer Tracing
+                </a></strong> you can ship your spans via{" "}
+            <strong><a
+                  href="https://docs.micrometer.io/tracing/reference/tracers.html"
+                >
+                  OpenZipkin Brave
+                </a></strong> or <strong><a
+                  href="https://docs.micrometer.io/tracing/reference/tracers.html"
+                >
+                  OpenTelemetry
+                </a></strong>{" "}
+            tracers to different backends (e.g. <strong><a
+                  href="https://docs.micrometer.io/tracing/reference/reporters.html"
+                >
+                  OpenZipkin
+                </a></strong> or{" "}
+            <strong><a
+                  href="https://docs.micrometer.io/tracing/reference/reporters.html"
+                >
+                  Wavefront
+                </a></strong>).
           </p>
         </div>
       </div>
