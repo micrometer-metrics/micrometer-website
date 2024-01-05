@@ -147,35 +147,35 @@ const IndexPage: React.FC<PageProps> = () => {
             <strong>Wavefront</strong>.
           </p>
           <p>
-            Through <strong><a
+            Through <a
                   href="https://docs.micrometer.io/micrometer/reference/observation.html"
                 >
                   Micrometer Observation
-                </a></strong> and{" "}
-            <strong><a
+                </a> and{" "}
+            <a
                   href="https://docs.micrometer.io/tracing/reference/"
                 >
                   Micrometer Tracing
-                </a></strong> you can ship your spans via{" "}
-            <strong><a
+                </a> you can ship your spans via{" "}
+            <a
                   href="https://docs.micrometer.io/tracing/reference/tracers.html"
                 >
                   OpenZipkin Brave
-                </a></strong> or <strong><a
+                </a> or <a
                   href="https://docs.micrometer.io/tracing/reference/tracers.html"
                 >
                   OpenTelemetry
-                </a></strong>{" "}
-            tracers to different backends (e.g. <strong><a
+                </a>{" "}
+            tracers to different backends (e.g. <a
                   href="https://docs.micrometer.io/tracing/reference/reporters.html"
                 >
                   OpenZipkin
-                </a></strong> or{" "}
-            <strong><a
+                </a> or{" "}
+            <a
                   href="https://docs.micrometer.io/tracing/reference/reporters.html"
                 >
                   Wavefront
-                </a></strong>).
+                </a>).
           </p>
         </div>
       </div>
