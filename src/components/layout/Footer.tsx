@@ -28,7 +28,14 @@ const Footer = ({ hideNewsletter }: Props) => {
                     href="https://www.vmware.com/help/privacy.html"
                     className="footer-link"
                   >
-                    Privacy
+                    Privacy Policy
+                  </a>{" "}
+                  •{" "}
+                  <a
+                    href="/security-policy/"
+                    className="footer-link"
+                  >
+                    Security Policy
                   </a>
                 </p>
               </div>
