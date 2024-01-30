@@ -1,4 +1,4 @@
 [submodule "static/docs"]
 	path = static/docs
 	url = git@github.com:micrometer-metrics/micrometer-docs.git
-	branch = embedded-docs
+	branch = gh-pages
