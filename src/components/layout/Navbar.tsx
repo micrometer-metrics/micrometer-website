@@ -74,6 +74,14 @@ const Nav = ({ isDesktop, subitems, onClickItem }: any) => {
               Micrometer Docs Generator
             </Link>
           </li>
+          <li>
+            <Link
+              className={`${item2Item}`}
+              to="https://micrometer.io/docs/"
+            >
+              Documentation Archive (1.11 and earlier)
+            </Link>
+          </li>
         </ul>
       </div>
       <Link className={`${item2Item}`} to="/support/">
