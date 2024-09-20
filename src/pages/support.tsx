@@ -46,7 +46,7 @@ const SupportPage: React.FC<PageProps> = () => {
             <th>Branch</th>
             <th>Initial Release</th>
             <th>End of Support</th>
-            <th>End Commercial Support *</th>
+            <th>End Enterprise Support *</th>
           </tr>
           </thead>
           <tbody>
@@ -77,10 +77,10 @@ const SupportPage: React.FC<PageProps> = () => {
 
           <div className="legend-block commercial my-3">
             <h3 className="is-size-6 has-text-weight-bold">
-              Commercial support
+              Enterprise support
             </h3>
             <p>
-              Business support from Micrometer experts during the OSS timeline, plus
+              Enterprise support from Micrometer experts during the OSS timeline, plus
               extended support after OSS End-Of-Life.
               <br/>
               See <a href="https://spring.io/support">
@@ -99,11 +99,11 @@ const SupportPage: React.FC<PageProps> = () => {
 
         <div className="has-background-light has-text-centered p-6 mb-6 commercial-support">
           <h2 className="is-size-4 has-text-weight-bold mb-3">
-            About commercial support (*)
+            About enterprise support (*)
           </h2>
           <div>
             This page shows the current state of project releases and does not
-            define the commercial support policy. Please refer to the official
+            define the enterprise support policy. Please refer to the official
             support policy for more information.
           </div>
           <div className="mt-3">
