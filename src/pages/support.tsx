@@ -111,7 +111,7 @@ const SupportPage: React.FC<PageProps> = () => {
               className="button is-spring"
               href="https://tanzu.vmware.com/spring-runtime"
             >
-              Learn more <span className="is-hidden-mobile">about commercial support.</span>
+              Learn more <span className="is-hidden-mobile">about enterprise support.</span>
             </a>
           </div>
         </div>
