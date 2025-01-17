@@ -36,7 +36,7 @@ const IndexPage: React.FC<PageProps> = () => {
               <p>
                 Popular frameworks that integrate with Micrometer include{" "}
                 <a
-                  href="https://helidon.io/docs/v2/#/se/metrics/02_micrometer"
+                  href="https://helidon.io/docs/v2/se/metrics/02_micrometer"
                   rel="nofollow"
                 >
                   Helidon
@@ -56,7 +56,7 @@ const IndexPage: React.FC<PageProps> = () => {
                   Quarkus
                 </a>
                 , and{" "}
-                <a href="https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#actuator.observability">
+                <a href="https://docs.spring.io/spring-boot/reference/actuator/observability.html">
                   Spring
                 </a>
                 . You can use the idioms and configuration model native to your
