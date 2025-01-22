@@ -18,14 +18,14 @@ const Footer = ({ hideNewsletter }: Props) => {
                 <p className="has-text-grey6">
                   Copyright © 2005 - {new Date().getFullYear()} Broadcom. All Rights Reserved. The term “Broadcom” refers to Broadcom Inc. and/or its subsidiaries.{" "}
                   <a
-                    href="https://www.vmware.com/help/legal.html"
+                    href="https://www.broadcom.com/company/legal/terms-of-use"
                     className="footer-link"
                   >
                     Terms of Use
                   </a>{" "}
                   •{" "}
                   <a
-                    href="https://www.vmware.com/help/privacy.html"
+                    href="https://www.broadcom.com/company/legal/privacy"
                     className="footer-link"
                   >
                     Privacy Policy
