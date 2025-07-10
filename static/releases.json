@@ -1,5 +1,11 @@
 [
   {
+    "branch": "1.16.x",
+    "initialDate": "2025-11-10",
+    "ossPolicyEnd": "2026-12-31",
+    "commercialPolicyEnd": "2027-12-31"
+  },
+  {
     "branch": "1.15.x",
     "initialDate": "2025-05-12",
     "ossPolicyEnd": "2026-06-30",
