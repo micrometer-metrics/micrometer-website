@@ -8,7 +8,7 @@
     },
     {
       "branch": "1.16.x",
-      "initialDate": "2025-11-10",
+      "initialDate": "2025-11-06",
       "ossPolicyEnd": "2026-12-31",
       "commercialPolicyEnd": "2027-12-31"
     },
@@ -76,7 +76,7 @@
     },
     {
       "branch": "1.6.x",
-      "initialDate": "2025-11-10",
+      "initialDate": "2025-11-06",
       "ossPolicyEnd": "2026-12-31",
       "commercialPolicyEnd": "2027-12-31"
     },
@@ -120,7 +120,7 @@
   "contextPropagation": [
     {
       "branch": "1.2.x",
-      "initialDate": "2025-11-10",
+      "initialDate": "2025-11-06",
       "ossPolicyEnd": "2026-12-31",
       "commercialPolicyEnd": "2027-12-31"
     },
