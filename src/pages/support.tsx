@@ -29,38 +29,54 @@ const Item = ({ version }: any) => {
   );
 };
 
-const SupportPage: React.FC<PageProps> = () => {
-  const support = getVersions(releases);
+interface SupportedProjectProps {
+  name: string;
+  releases: Array<any>;
+}
 
+const SupportedProject = ({ name, releases }: SupportedProjectProps) => {
+  const id = name.toLowerCase().replaceAll(' ', '-');
+  return (
+    <div id={id}>
+      <h1>{name} Support</h1>
+      <table
+        className="table project-support is-fullwidth mt-4 mb-0"
+        aria-label={`${name} Support`}
+      >
+        <thead>
+        <tr>
+          <th>Branch</th>
+          <th>Initial Release</th>
+          <th>End of Support</th>
+          <th>End Enterprise Support *</th>
+        </tr>
+        </thead>
+        <tbody>
+        {releases.map((version: any, index: number) => (
+          <Item version={version} key={`item-${index}`}/>
+        ))}
+        </tbody>
+      </table>
+
+      <div className="calendar-releases mt-6">
+        <div id={`${id}-timeline`} className="timeline" aria-label={`${name} Timeline`}>
+          <Releases releases={releases}/>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const SupportPage: React.FC<PageProps> = () => {
+  const micrometerReleases = getVersions(releases.micrometer);
+  const micrometerTracingReleases = getVersions(releases.micrometerTracing);
+  const contextPropagationReleases = getVersions(releases.contextPropagation);
   return (
     <Layout className="support">
       <div className="container content py-6">
-        <h1>Micrometer Support</h1>
-
-        <table
-          className="table project-support is-fullwidth mt-4 mb-0"
-          aria-label="Project support"
-        >
-          <thead>
-          <tr>
-            <th>Branch</th>
-            <th>Initial Release</th>
-            <th>End of Support</th>
-            <th>End Enterprise Support *</th>
-          </tr>
-          </thead>
-          <tbody>
-          {support.map((version: any, index: number) => (
-            <Item version={version} key={`item-${index}`}/>
-          ))}
-          </tbody>
-        </table>
-
-        <div className="calendar-releases mt-6">
-          <div className="timeline">
-            <Releases releases={support}/>
-          </div>
-        </div>
+        <SupportedProject name="Micrometer" releases={micrometerReleases} />
+        <SupportedProject name="Micrometer Tracing" releases={micrometerTracingReleases} />
+        <SupportedProject name="Context Propagation" releases={contextPropagationReleases} />
 
         <div className="release-legend has-bigest-border-light px-6 py-4 mb-6">
           <div className="legend-block oss my-3">
