@@ -3,8 +3,8 @@
     {
       "branch": "1.17.x",
       "initialDate": "2026-06-01",
-      "ossPolicyEnd": "2027-06-30",
-      "commercialPolicyEnd": "2028-06-30"
+      "ossPolicyEnd": "2027-07-31",
+      "commercialPolicyEnd": "2028-07-31"
     },
     {
       "branch": "1.16.x",
@@ -71,8 +71,8 @@
     {
       "branch": "1.7.x",
       "initialDate": "2026-06-01",
-      "ossPolicyEnd": "2027-06-30",
-      "commercialPolicyEnd": "2028-06-30"
+      "ossPolicyEnd": "2027-07-31",
+      "commercialPolicyEnd": "2028-07-31"
     },
     {
       "branch": "1.6.x",
