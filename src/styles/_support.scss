@@ -421,4 +421,45 @@ $future: #c1edff;
   td {
     font-size: 14px;
   }
+
+  .showmore {
+    margin-top: 1rem;
+    
+    .showmore-toggle {
+      position: relative;
+      padding: 0.25rem 0;
+      text-decoration: none !important;
+      color: $linkColor !important;
+      background: none !important;
+      border: none !important;
+      box-shadow: none !important;
+      padding-right: 20px;
+      font-size: 0.875rem;
+      cursor: pointer;
+      font-family: inherit;
+      font-weight: inherit;
+      display: inline-block;
+      
+      &:hover {
+        background-color: transparent !important;
+        color: $color !important;
+        text-decoration: underline !important;
+        border: none !important;
+        box-shadow: none !important;
+      }
+      
+      &:focus {
+        outline: none;
+      }
+      
+      svg {
+        position: absolute !important;
+        top: 50% !important;
+        right: 0 !important;
+        transform: translateY(-50%) !important;
+        margin: 0 !important;
+        vertical-align: baseline !important;
+      }
+    }
+  }
 }

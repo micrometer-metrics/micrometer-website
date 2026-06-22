@@ -4,10 +4,12 @@ import "../styles/main.scss";
 import Layout from "../components/layout/Layout";
 import { Releases } from "../components/support/Release";
 import { getVersions } from "../components/support/Project";
+import ShowMore from "../components/support/ShowMore";
 import releases from "../../static/releases.json";
 import { DateTime } from "luxon"
 
 const isPast = (date: DateTime): boolean => date < DateTime.now()
+const isSupportExpired = (date: DateTime): boolean => date.endOf("month") < DateTime.now()
 
 const Item = ({ version }: any) => {
   return (
@@ -19,10 +21,10 @@ const Item = ({ version }: any) => {
       <td className={`${isPast(version.initialRelease) ? "past" : ""}`}>
         {version.initialReleaseDate}
       </td>
-      <td className={`${isPast(version.endOfSupport) ? "past" : ""}`}>
+      <td className={`${isSupportExpired(version.endOfSupport) ? "past" : ""}`}>
         {version.endOfSupportDate}
       </td>
-      <td className={`${isPast(version.endCommercialSupport) ? "past" : ""}`}>
+      <td className={`${isSupportExpired(version.endCommercialSupport) ? "past" : ""}`}>
         {version.endCommercialSupportDate}
       </td>
     </tr>
@@ -35,33 +37,68 @@ interface SupportedProjectProps {
 }
 
 const SupportedProject = ({ name, releases }: SupportedProjectProps) => {
+  const [showExpired, setShowExpired] = React.useState(false);
   const id = name.toLowerCase().replaceAll(' ', '-');
+
+  // Filter versions by enterprise support status
+  const versionsWithEnterpriseSupport = React.useMemo(() => {
+    return releases.filter(version => 
+      version.status === 'active' || 
+      version.status === 'migrate' || 
+      version.status === 'coming'
+    );
+  }, [releases]);
+
+  const versionsWithExpiredEnterpriseSupport = React.useMemo(() => {
+    return releases.filter(version => version.status === 'inactive');
+  }, [releases]);
+
+  const visibleVersions = React.useMemo(() => {
+    return showExpired ? releases : versionsWithEnterpriseSupport;
+  }, [releases, versionsWithEnterpriseSupport, showExpired]);
+
+  const expiredCount = versionsWithExpiredEnterpriseSupport.length;
+
   return (
     <div id={id}>
       <h1>{name} Support</h1>
-      <table
-        className="table project-support is-fullwidth mt-4 mb-0"
-        aria-label={`${name} Support`}
-      >
-        <thead>
-        <tr>
-          <th>Branch</th>
-          <th>Initial Release</th>
-          <th>End of Support</th>
-          <th>End Enterprise Support *</th>
-        </tr>
-        </thead>
-        <tbody>
-        {releases.map((version: any, index: number) => (
-          <Item version={version} key={`item-${index}`}/>
-        ))}
-        </tbody>
-      </table>
+      <div className="mb-6">
+        <table
+          className="table project-support is-fullwidth mt-4 mb-0"
+          aria-label={`${name} Support`}
+        >
+          <thead>
+          <tr>
+            <th>Branch</th>
+            <th>Initial Release</th>
+            <th>End of OSS Support</th>
+            <th>End Enterprise Support *</th>
+          </tr>
+          </thead>
+          <tbody>
+          {visibleVersions.map((version: any, index: number) => (
+            <Item version={version} key={`item-${index}`}/>
+          ))}
+          </tbody>
+        </table>
+
+        <ShowMore
+          countExpired={expiredCount}
+          showExpired={showExpired}
+          onToggle={setShowExpired}
+        />
+      </div>
 
       <div className="calendar-releases mt-6">
         <div id={`${id}-timeline`} className="timeline" aria-label={`${name} Timeline`}>
-          <Releases releases={releases}/>
+          <Releases releases={visibleVersions}/>
         </div>
+
+        <ShowMore
+          countExpired={expiredCount}
+          showExpired={showExpired}
+          onToggle={setShowExpired}
+        />
       </div>
     </div>
   );
@@ -84,7 +121,7 @@ const SupportPage: React.FC<PageProps> = () => {
             <p>
               Free security updates and bugfixes with support from the Micrometer
               community. See{" "}
-              <a href="https://tanzu.vmware.com/support/oss">
+              <a href="https://spring.io/support-policy">
                 VMware Tanzu OSS support policy
               </a>
               .
@@ -100,7 +137,7 @@ const SupportPage: React.FC<PageProps> = () => {
               extended support after OSS End-Of-Life.
               <br/>
               See <a href="https://spring.io/support">
-              Tanzu Spring Runtime
+              Tanzu Spring
             </a>{" "}
               for more details.
             </p>
