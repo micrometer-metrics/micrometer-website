@@ -52,6 +52,24 @@ body.dark {
   .main a {
     color: #1f98ff;
   }
+
+  .project-support .showmore .showmore-toggle {
+    color: #1f98ff !important;
+    text-decoration: none !important;
+    background-color: transparent !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+    
+    &:hover,
+    &:focus,
+    &:active {
+      color: #1f98ff !important;
+      text-decoration: underline !important;
+      background-color: transparent !important;
+      border-color: transparent !important;
+      box-shadow: none !important;
+    }
+  }
   a.link-animate:before,
   .links-animate a:before {
     background-color: #1f98ff;
