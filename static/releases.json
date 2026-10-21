@@ -1,6 +1,12 @@
 {
   "micrometer": [
     {
+      "branch": "1.18.x",
+      "initialDate": "2026-11",
+      "ossPolicyEnd": "2027-12",
+      "commercialPolicyEnd": "2028-12"
+    },
+    {
       "branch": "1.17.x",
       "initialDate": "2026-06",
       "ossPolicyEnd": "2027-07",
@@ -68,6 +74,12 @@
     }
   ],
   "micrometerTracing": [
+    {
+      "branch": "1.8.x",
+      "initialDate": "2026-11",
+      "ossPolicyEnd": "2027-12",
+      "commercialPolicyEnd": "2028-12"
+    },
     {
       "branch": "1.7.x",
       "initialDate": "2026-06",
