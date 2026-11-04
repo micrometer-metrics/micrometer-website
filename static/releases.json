@@ -133,8 +133,8 @@
     {
       "branch": "1.2.x",
       "initialDate": "2025-11",
-      "ossPolicyEnd": "2026-12",
-      "commercialPolicyEnd": "2027-12"
+      "ossPolicyEnd": "2027-12",
+      "commercialPolicyEnd": "2028-12"
     },
     {
       "branch": "1.1.x",
